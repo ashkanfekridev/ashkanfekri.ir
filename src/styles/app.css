@@ -2,8 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    position: relative;  
-    font-family: iranyekan;  
+    position: relative;
+    font-family: iranyekan;
 }
 
 body{
@@ -219,7 +219,7 @@ main#main{
     height: 140px;
     border-radius: 50%;
     border: 6px solid #fff8;
-    
+
 }
 
 
@@ -230,7 +230,7 @@ main#main{
     align-self: baseline;
     align-content: center;
     background: rgb(80, 150, 255);
-    
+
 }
 
 
@@ -282,7 +282,7 @@ main#main{
     }
  #box-about_me{
     width: 100%;
- } 
+ }
 
  #article-container{
     width: 100%;
