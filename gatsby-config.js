@@ -1,11 +1,73 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `ashkan fekri`,
+    description: `my name is ashkanfekri and this is my personal blog.`,
+    author: `ashkanfekri`,
   },
   plugins: [
+
+
     `gatsby-plugin-react-helmet`,
+
+
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+
+    /**
+     // ==================================================================================
+     // *************************************** meta *************************************
+     // ==================================================================================
+     **/
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ashkanfekri`,
+        short_name: `ashkanfekri`,
+        start_url: `/`,
+        description: 'Software engineer and open source creator. This is my digital garden.',
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    /**
+     // ==================================================================================
+     // *************************************** meta *************************************
+     // ==================================================================================
+     **/
+
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+
+
+
+
+
+
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
+      },
+    },
+
+
+
+
+    
+
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,20 +75,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+
+
+
+
+
+
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
