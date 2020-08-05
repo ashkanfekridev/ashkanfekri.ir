@@ -14,7 +14,7 @@ const AboutMeBox = () => {
         <div className="mt-2">
           <h4 className="color-white">من رو میتونی از اینجاها پیدا کنی :)</h4>
           <div className="flex mt-1 icon-network_row">
-            <a href="https://github.com/ashkanfekridev/">
+            <a href="https://github.com/ashkanfekridev/" target={'_blank'}>
               <img src={githubIcon} alt="" className="icon-network-size-1" />
             </a>
           </div>
