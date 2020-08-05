@@ -27,8 +27,8 @@ module.exports = {
         short_name: `ashkanfekri`,
         start_url: `/`,
         description: 'Software engineer and open source creator. This is my digital garden.',
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#5096ff`,
+        theme_color: `#5096ff`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
