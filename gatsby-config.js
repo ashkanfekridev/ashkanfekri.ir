@@ -105,7 +105,24 @@ module.exports = {
         background_color: `#5096ff`,
         theme_color: `#5096ff`,
         display: `fullscreen`,
-        icon: `src/images/avatar.png`, // This path is relative to the root of the site.
+        icon: `./src/images/avatar-192*192.png`, // This path is relative to the root of the site.
+        // icons: [
+        //   {
+        //     src: `./src/images/avatar-192*192.png`,
+        //     sizes: `192x192`,
+        //     type: `image/png`,
+        //   },
+        //   {
+        //     src: `./src/images/avatar-256*256.png`,
+        //     sizes: `256x256`,
+        //     type: `image/png`,
+        //   },
+        //   {
+        //     src: `./src/images/avatar-512*512.png`,
+        //     sizes: `512x512`,
+        //     type: `image/png`,
+        //   },
+        // ],
       },
     },
     /**
