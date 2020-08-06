@@ -3,13 +3,15 @@ import {graphql} from "gatsby"
 import Layout from "../components/layout";
 import AboutMeBox from "../components/aboutMeBox";
 import PostList from "../components/postList";
+import SEO from "../components/seo";
 
 
 const IndexPage = ({data}) => {
   return (
     <Layout>
+      <SEO title={'اشکان فکری - صفحه اصلی'}></SEO>
       <div id="main-container" className="flex">
-      <AboutMeBox></AboutMeBox>
+        <AboutMeBox></AboutMeBox>
         <PostList data={data.latest.edges}/>
       </div>
     </Layout>

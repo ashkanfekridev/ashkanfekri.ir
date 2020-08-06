@@ -1,15 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `ashkan fekri`,
-    description: `my name is ashkanfekri and this is my personal blog.`,
-    author: `ashkanfekri`,
+    title: `اشکان فکری`,
+    description: `سلام این وبلاگ شخصی من هستش و من داخلش درباره یکسری نکات و روزمرگی های خودم مینویسم.`,
+    author: `اشکان فکری`,
   },
   plugins: [
-
-
     `gatsby-plugin-react-helmet`,
-
-
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -17,7 +13,7 @@ module.exports = {
 
 
 
-
+    // code hilighter
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -52,7 +48,7 @@ module.exports = {
               // Defaults to false.
               // If you wish to only show line numbers on certain code blocks,
               // leave false and use the {numberLines: true} syntax below
-              showLineNumbers: false,
+              showLineNumbers: true,
               // If setting this to true, the parser won't handle and highlight inline
               // code used in markdown i.e. single backtick code like `this`.
               noInlineHighlight: false,
