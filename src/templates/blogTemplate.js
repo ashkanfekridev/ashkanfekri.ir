@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
 
-
+import './../styles/app.css'
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import AboutMeBox from "../components/aboutMeBox";
@@ -38,7 +38,7 @@ export default function Template({data}) {
       return (
         <Layout>
           <SEO title={frontmatter.title + ' -  اشکان فکری'}></SEO>
-          <div id="main-container" className="flex">
+          <div id="main-container">
             <div className="blog-post-container">
               <article id="blog-post" className={'mr-3 flex flex-column'}>
                 <header id="article-header">

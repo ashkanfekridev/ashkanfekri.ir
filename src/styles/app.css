@@ -296,3 +296,9 @@ main#main{
 code[class*="language-"], pre[class*="language-"]{
   direction: ltr;
 }
+
+pre{
+  background: #eee;
+  padding: 15px;
+  border-radius: 5px
+}

@@ -101,7 +101,7 @@ module.exports = {
         background_color: `#5096ff`,
         theme_color: `#5096ff`,
         display: `fullscreen`,
-        icon: `./src/images/avatar-192*192.png`, // This path is relative to the root of the site.
+        icon: `./src/images/avatar-192_192.png`, // This path is relative to the root of the site.
         // icons: [
         //   {
         //     src: `./src/images/avatar-192*192.png`,
