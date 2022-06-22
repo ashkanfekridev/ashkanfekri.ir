@@ -1,4 +1,4 @@
-![avatar](./src/images/avatar-512*512.png)
+![avatar](https://github.com/ashkanfekridev/ashkanfekri.ir/raw/master/src/images/avatar-192_192.png)
 
 
 سلام، من اشکان هستم و این پروژه وبلاگ شخصی من است.
