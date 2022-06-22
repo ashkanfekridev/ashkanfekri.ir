@@ -4,7 +4,7 @@ slug: laravel/collection-in-laravel
 date: 2022-06-22
 ---
 
-```
+```php
     $collection = (new \Illuminate\Support\Collection(['ashkan', 'hasan', 'sara']));
     /**
      * map
