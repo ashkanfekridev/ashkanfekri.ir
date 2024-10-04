@@ -1,7 +1,18 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </div>
+
+  <NuxtPage/>
+
+
 </template>
+
+<script>
+
+export default {
+  mounted() {
+    /**
+     * RTL
+     */
+    document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
+
+}
+</script>
