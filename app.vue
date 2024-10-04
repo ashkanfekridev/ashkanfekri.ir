@@ -1,10 +1,6 @@
 <template>
-
   <NuxtPage/>
-
-
 </template>
-
 <script>
 
 export default {
@@ -13,6 +9,6 @@ export default {
      * RTL
      */
     document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
-
+  }
 }
 </script>
