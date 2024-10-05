@@ -13,7 +13,7 @@
           <div class="content">
             <p class="text-xl font-black text-gray-800 dark:text-gray-100">سلام<span class="">👋</span>اشکان هستم، به
               برنامه نویسی و توسعه نرم افزار علاقه مندم.</p>
-            <p class="text-lg font-light text-gray-600 dark:text-gray-500">اینجاهم راجب روزمرگیم و اتفاقاتی که برام پیش
+            <p class="text-lg font-medium text-gray-600 dark:text-gray-500">اینجاهم راجب روزمرگیم و اتفاقاتی که برام پیش
               میاد مینویسم که کمی شخصی هستش و هم فنی.</p>
             <div class="flex items-center flex-wrap gap-4 mt-2">
               <a href="https://github.com/ashkanfekridev"
@@ -51,6 +51,7 @@ onBeforeMount(()=>{
   } else {
     message.value = 'فعال سازی حالت شب🌙'
   }
+
 })
 
 
