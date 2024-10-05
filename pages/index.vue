@@ -1,9 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-2xl mt-16 md:p-0 p-4">
-    <button
-        class="text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-600 border rounded-md p-2 inline-block mb-16"
-        v-on:click="toggleDarkMode">{{ message }}
-    </button>
+  <div class="container mx-auto max-w-2xl mt-2 md:p-0 p-4">
 
     <section id="about-me" class="">
       <div class="md:flex items-center">
@@ -29,47 +25,41 @@
       </div>
     </section>
 
+
+    <main class="my-8 border-t">
+      <p class="font-black text-2xl my-4">جدید ترین نوشته</p>
+      <div v-for="post in formattedData" class="relative border rounded px-4 py-2 mb-4">
+        <h3 class="font-medium text-xl">{{post.title}}</h3>
+        <p v-if="post.description">{{post.description}}</p>
+        <nuxt-link :to="post.path"><span  class="absolute inset-0"></span></nuxt-link>
+      </div>
+    </main>
+
   </div>
 
 </template>
 
-<style scoped>
-
-</style>
 <script setup>
-const message = useState('message', () => 'فعال سازی حالت شب🌙')
-const theme = useState('theme')
+const { data } = await useAsyncData('home', () => queryContent().sort({ _id: -1 }).find())
 
 
-
-
-onBeforeMount(()=>{
-
-  if (localStorage.theme && localStorage.theme === "dark") {
-    document.documentElement.classList.add('dark')
-    message.value = 'فعال سازی حالت روز☀️'
-  } else {
-    message.value = 'فعال سازی حالت شب🌙'
-  }
-
+const formattedData = computed(() => {
+  return data.value?.map((articles) => {
+    return {
+      path: articles._path,
+      title: articles.title || 'no-title available',
+      description: articles.description || '',
+      image: articles.image || '/not-found.jpg',
+      alt: articles.alt || 'no alter data available',
+      ogImage: articles.ogImage || '/not-found.jpg',
+      date: articles.date || 'not-date-available',
+      tags: articles.tags || [],
+      published: articles.published || false,
+    }
+  }) || []
 })
 
 
-const toggleDarkMode = () => {
-  if (document.documentElement.classList.item('dark') === null) {
-    document.documentElement.classList.add('dark')
-    localStorage.setItem('theme', 'dark')
-    console.log('dark')
-
-    message.value = 'فعال سازی حالت روز☀️'
-
-  } else if (localStorage.theme === 'dark') {
-    document.documentElement.classList.remove('dark')
-    localStorage.removeItem('theme')
-    console.log('light')
-    message.value = 'فعال سازی حالت شب🌙'
-  }
-}
 
 
 </script>
