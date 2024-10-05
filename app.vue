@@ -2,7 +2,7 @@
   <header id="header">
     <div class="container mx-auto max-w-2xl mt-8 md:p-0 p-4">
       <div class="flex items-center mb-8">
-        <a href="/" class="font-black text-2xl">اشکان فکری</a>
+        <a href="/" class="font-black text-2xl dark:text-white">اشکان فکری</a>
         <button
             class="mr-auto text-gray-800 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-600 border rounded-md p-2 inline-block"
             v-on:click="toggleDarkMode">{{ message }}

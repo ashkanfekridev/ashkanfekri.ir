@@ -26,11 +26,11 @@
     </section>
 
 
-    <main class="my-8 border-t">
-      <p class="font-black text-2xl my-4">جدید ترین نوشته</p>
+    <main class="my-8 border-t ">
+      <p class="font-black text-2xl my-4 dark:text-white">جدید ترین نوشته</p>
       <div v-for="post in formattedData" class="relative border rounded px-4 py-2 mb-4">
-        <h3 class="font-medium text-xl">{{post.title}}</h3>
-        <p v-if="post.description">{{post.description}}</p>
+        <h3 class="font-medium text-xl dark:text-white">{{post.title}}</h3>
+        <p v-if="post.description" class="dark:text-blue-100">{{post.description}}</p>
         <nuxt-link :to="post.path"><span  class="absolute inset-0"></span></nuxt-link>
       </div>
     </main>
@@ -38,6 +38,15 @@
   </div>
 
 </template>
+
+<style>
+.shiki.shiki-themes.github-light{
+  overflow-x: scroll;
+  padding: 8px;
+  border-radius: 4px;
+  border:1px solid #ccc
+}
+</style>
 
 <script setup>
 const { data } = await useAsyncData('home', () => queryContent().sort({ _id: -1 }).find())

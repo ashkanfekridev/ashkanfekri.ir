@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
       head: {
           bodyAttrs: {
-              class: 'bg-white dark:bg-black'
+              class: 'bg-gray-100 dark:bg-gray-900'
           },
       }
   },
@@ -22,6 +22,12 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/content'],
     content:{
-
+        highlight: {
+            // Theme used in all color schemes.
+            theme: 'github-light',
+            langs: [
+                'php'
+            ]
+        }
     }
 })
