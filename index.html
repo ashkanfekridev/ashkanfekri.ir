@@ -1,11 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ashkan fekri</title>
+    <title>معرفی اشکان فکری</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Vazir', sans-serif;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello</h1>
+    <canvas id="canvas"></canvas>
+    <section class="bg-gray-900 text-white flex flex-col items-center justify-between min-h-screen p-4">
+        <div></div>
+        <div class="content max-w-lg bg-gray-800 rounded-lg shadow-lg p-6 w-full">
+            <div class="text-center">
+                <img src="https://avatars.githubusercontent.com/u/31134156?v=4" alt="Your Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4">
+                <h1 class="text-3xl font-bold mb-4">سلام، من اشکان فکری</h1>
+            </div>
+            <p class="text-gray-400 text-lg mb-6 text-center">سلام! من اشکان فکری هستم، یک توسعه‌دهنده وب از ایران. عاشق کدنویسی و حل مشکلات پیچیده با استفاده از تکنولوژی‌های مدرن هستم. در GitHub پروژه‌های متعددی دارم که شامل HTML، CSS، JavaScript و فریمورک‌های مدرن می‌شود. علاوه بر این، به توسعه ابزارها و کتابخانه‌های کارآمد برای توسعه‌دهندگان علاقه‌مندم. به عنوان یک علاقه‌مند به یادگیری مستمر، همیشه به دنبال به‌روز ماندن با آخرین تکنولوژی‌ها و بهترین شیوه‌ها در صنعت توسعه نرم‌افزار هستم. از بازدید و مشارکت در پروژه‌های من خوشحال می‌شوم!</p>
+            <div class="text-center">
+                <div class="flex flex-col sm:flex-row justify-center sm:space-x-4 space-x-reverse mt-4">
+                    <a href="https://github.com/ashkanfekridev" class="bg-gray-700 text-white px-4 py-2 rounded mb-2 sm:mb-0 flex items-center justify-center"><i class="fab fa-github mr-2"></i>گیت‌هاب</a>
+                    <a href="https://instagram.com/ashkanfekridev" class="bg-pink-500 text-white px-4 py-2 rounded mb-2 sm:mb-0 flex items-center justify-center"><i class="fab fa-instagram mr-2"></i>اینستاگرام</a>
+                    <a href="tel:+989116169846" class="bg-green-500 text-white px-4 py-2 rounded flex items-center justify-center"><i class="fas fa-phone-alt mr-2"></i>تماس</a>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-8 text-center text-white z-50">
+            <p>این صفحه با کمک هوش مصنوعی ساخته شده است.</p>
+            <p>توسعه داده شده توسط Microsoft Copilot.</p>
+        </footer>
+    </section>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let stars = [];
+        const starColors = ['#ffffff', '#ffe9c4', '#d4fbff'];
+
+        function createStars() {
+            for (let i = 0; i < 100; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const radius = Math.random() * 1.5;
+                const color = starColors[Math.floor(Math.random() * starColors.length)];
+                stars.push({ x, y, radius, color });
+            }
+        }
+
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fillStyle = star.color;
+                ctx.fill();
+            });
+        }
+
+        function animateStars() {
+            drawStars();
+            stars.forEach(star => {
+                star.y += 0.2;
+                if (star.y > canvas.height) {
+                    star.y = 0;
+                }
+            });
+            requestAnimationFrame(animateStars);
+        }
+
+        createStars();
+        animateStars();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            stars = [];
+            createStars();
+        });
+    </script>
 </body>
 </html>
