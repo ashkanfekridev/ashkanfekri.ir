@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa"
       dir="rtl"
-      x-data="{theme: 'dark'}"
-      x-init="theme=localStorage.getItem('theme')??'dark'"
-      :class="theme">
+      :class="localStorage.getItem('theme')==='light'?'light': 'dark'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +9,28 @@
     <link rel="stylesheet" href="/src/assets/css/app.css">
 </head>
 <body class="bg-white dark:bg-gray-900">
-<div id="app">
-    <main class="container mx-auto">
-        <div class="flex">
-
+<div id="app" class="flex flex-col min-h-screen">
+    <header class="bg-white">
+        <div class="max-w-3xl">
+            <h1 class="text-black">
+                <a href="/">ashkan fekri</a>
+            </h1>
         </div>
+    </header>
+
+    <main id="main" class="mt-4 grow">
+        <div class="container">
+
+            {children}
+        </div>
+
     </main>
+    <footer class="bt-solid-1 mt-3" id="footer">
+    <p class="text-center p-3">در جهان آزاد چیزی برای کسی محفوظ نیست بجر آزادی فرد :)</p>
+    </footer>
+    
+    
+    
 </div>
 <script type="module" src="/src/assets/js/app.js"></script>
 </body>
