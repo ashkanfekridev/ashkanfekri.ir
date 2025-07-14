@@ -1,34 +1,61 @@
 <!DOCTYPE html>
-<html lang="en"
-      dir="ltr"
+<html lang="fa"
+      dir="rtl"
       :class="localStorage.getItem('theme')==='light'?'light': 'dark'">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اشکان فکری</title>
     <link rel="stylesheet" href="/src/assets/css/app.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-white dark:bg-gray-900">
+<body class="bg-white dark:bg-gray-900 flex flex-col min-h-screen items-center justify-center">
 <div class="max-w-4xl mx-auto">
-<div id="mac-window" class="border border-gray-800 rounded-xl mt-14">
-    <header id="mac-window_title" class=" flex px-5 py-2 border-b justify-between border-b-gray-800">
-        <div class="flex gap-3">
-        <span class="w-3 h-3 rounded-full bg-red-500 block"></span>
-        <span class="w-3 h-3 rounded-full bg-yellow-500 block"></span>
-        <span class="w-3 h-3 rounded-full bg-green-500 block"></span>
-        </div>
-        <div >
-            <p class="text-md text-gray-500">ashaknfkeri - ashkanfekridev@gmail.com</p>
-        </div>
-    </header>
-    <main id="mac-window_main" class="p-5 text-gray-400">
-        <h2>Hi, I'm ashes.</h2>
-        <h4>backend-developer</h4>
-        <p>
 
-        </p>
-    </main>
-</div>
+    <div id="mac-window" class="border border-gray-800 rounded-xl mx-4">
+        <header id="mac-window_title"
+                class=" flex flex-row-reverse px-5 py-2 border-b justify-between border-b-gray-800 items-center">
+            <div class="flex flex-row-reverse gap-3">
+                <span class="w-3 h-3 rounded-full bg-red-500 block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500 block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500 block"></span>
+            </div>
+            <div class="flex-1 text-center">
+                <p class="text-md text-gray-500">ashaknfkeri - ashkanfekridev@gmail.com</p>
+            </div>
+        </header>
+        <main id="mac-window_main" class="p-5 text-gray-300">
+            <div class="flex flex-wrap-reverse md:flex-nowrap items-center gap-4 justify-between">
+
+                <div id="info-container" class="items-center">
+                    <h2 class="text-3xl text-gray-100">درود اشکان هستم<span class="text-6xl animate-wave">👋</span>.</h2>
+                    <h4 class="text-2xl text-gray-200">توسعه دهنده نرم افزار و برنامه نویس</h4>
+                    <p class="mt-4">
+                        چند سالی هستش که دارم توی ضمینه توسعه و بهینه سازی نرم افزار فعالیت میکنم در اوایل ورودم به این
+                        عرصه با توسعه صفحات وب با استفاده از تکنولوژای های نظیر(HTML, CSS) کردم سپس به یادگیری وردپرس
+                        هدفمند شدم که باعث علاقه زیاد من به زبان php شد که در هسته مرکزی وردپرس استفاده میشد و در آن
+                        زمان منجرب به ایجاد و توسعه تعدادی قالب و افزونه وردپرس شده.
+                    </p>
+                    <p>البته از قبل از شروع برنامه نویسی شروع به یادگیری الکترونیک و روباتیک کرده بودم که به آشنای با
+                        پلتفرم آردینو شد که منجرب به علاقه من به دنیای الکترونیک شد که تا الان زره ای هم از اون علاقه کم
+                        نشده:).</p>
+                    <p>تا الان هم کارهای زیادی انجام دادم مثل: توسعه نرم افزار اندروید و پروژ های iot و شبکه و طراحی ui/ux و ...</p>
+                    <div class="w-full">
+                        <div class="text-center mt-6 space-y-2 sm:space-y-0 sm:flex sm:space-x-4 justify-between">
+                            <a href="https://github.com/ashkanfekridev" class="bg-gray-700 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-gray-600"><i class="fab fa-github ml-2"></i>گیت‌هاب</a>
+                            <a href="https://instagram.com/ashkanfekridev" class="bg-pink-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-pink-400"><i class="fab fa-instagram ml-2"></i>اینستاگرام</a>
+                            <a href="tel:+989116169846" class="bg-green-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-green-400"><i class="fas fa-phone-alt ml-2"></i>تماس</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="image-container" class="text-center w-full">
+                    <img src="/src/assets/images/me.jpeg" alt="ashkan fekri avatar image" class="max-w-full m:max-w-64 rounded-3xl">
+                </div>
+
+            </div>
+        </main>
+    </div>
 </div>
 <script type="module" src="/src/assets/js/app.js"></script>
 </body>
