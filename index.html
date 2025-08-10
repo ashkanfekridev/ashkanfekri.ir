@@ -6,9 +6,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اشکان فکری</title>
-<!--   <link rel="stylesheet" href="/src/assets/css/app.css">-->
+    <!--   <link rel="stylesheet" href="/src/assets/css/app.css">-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/font-face.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+
+
+            font-family: 'Vazir', sans-serif;
+        }
+
+        .animate-wave {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+
+        @keyframes wave-animation {
+            0% {
+                transform: rotate(0.0deg)
+            }
+            10% {
+                transform: rotate(14.0deg)
+            }
+            20% {
+                transform: rotate(-8.0deg)
+            }
+            30% {
+                transform: rotate(14.0deg)
+            }
+            40% {
+                transform: rotate(-4.0deg)
+            }
+            50% {
+                transform: rotate(10.0deg)
+            }
+            60% {
+                transform: rotate(0.0deg)
+            }
+            100% {
+                transform: rotate(0.0deg)
+            }
+        }
+    </style>
 </head>
 <body class="bg-white dark:bg-gray-900 flex flex-col min-h-screen items-center justify-center">
 <div class="max-w-4xl mx-auto">
@@ -40,23 +85,31 @@
                     <p>البته از قبل از شروع برنامه نویسی شروع به یادگیری الکترونیک و روباتیک کرده بودم که به آشنای با
                         پلتفرم آردینو شد که منجرب به علاقه من به دنیای الکترونیک شد که تا الان زره ای هم از اون علاقه کم
                         نشده:).</p>
-                    <p>تا الان هم کارهای زیادی انجام دادم مثل: توسعه نرم افزار اندروید و پروژ های iot و شبکه و طراحی ui/ux و ...</p>
+                    <p>تا الان هم کارهای زیادی انجام دادم مثل: توسعه نرم افزار اندروید و پروژ های iot و شبکه و طراحی
+                        ui/ux و ...</p>
                     <div class="w-full">
                         <div class="text-center mt-6 space-y-2 sm:space-y-0 sm:flex sm:space-x-4 justify-between">
-                            <a href="https://github.com/ashkanfekridev" class="bg-gray-700 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-gray-600"><i class="fab fa-github ml-2"></i>گیت‌هاب</a>
-                            <a href="https://instagram.com/ashkanfekridev" class="bg-pink-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-pink-400"><i class="fab fa-instagram ml-2"></i>اینستاگرام</a>
-                            <a href="tel:+989116169846" class="bg-green-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-green-400"><i class="fas fa-phone-alt ml-2"></i>تماس</a>
+                            <a href="https://github.com/ashkanfekridev"
+                               class="bg-gray-700 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-gray-600"><i
+                                    class="fab fa-github ml-2"></i>گیت‌هاب</a>
+                            <a href="https://instagram.com/ashkanfekridev"
+                               class="bg-pink-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-pink-400"><i
+                                    class="fab fa-instagram ml-2"></i>اینستاگرام</a>
+                            <a href="tel:+989116169846"
+                               class="bg-green-500 text-white px-4 py-2 rounded flex items-center justify-center transition duration-200 hover:bg-green-400"><i
+                                    class="fas fa-phone-alt ml-2"></i>تماس</a>
                         </div>
                     </div>
                 </div>
                 <div id="image-container" class="text-center w-full">
-                    <img src="/src/assets/images/me.jpeg" alt="ashkan fekri avatar image" class="max-w-full m:max-w-64 rounded-3xl">
+                    <img src="/src/assets/images/me.jpeg" alt="ashkan fekri avatar image"
+                         class="max-w-full m:max-w-64 rounded-3xl">
                 </div>
 
             </div>
         </main>
     </div>
 </div>
-<script type="module" src="/src/assets/js/app.js"></script>
+<!--<script type="module" src="/src/assets/js/app.js"></script>-->
 </body>
 </html>
